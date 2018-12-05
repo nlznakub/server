@@ -2,21 +2,21 @@
 
 module.exports = {
   development: {
-    client: 'mysql',
+    client: 'mysql', // type database
     connection: {
-      user: 'root',
-      password: 'waterfire',
-      database: 'typeorm'
+      user: 'root', // username
+      password: 'waterfire', // password
+      database: 'typeorm' // database name
     },
     define: {
       charset: 'utf8',
       collate: 'utf8_general_ci'
     },
     migrations: {
-      directory: __dirname + '/knex/migrations'
+      directory: __dirname + '/knex/migrations' // directory migrations
     },
     seeds: {
-      directory: __dirname + '/knex/seeds'
+      directory: __dirname + '/knex/seeds' // directory seeds
     }
   },
   actually_use: {
