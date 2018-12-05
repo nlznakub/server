@@ -10,4 +10,8 @@ var _entity2 = _interopRequireDefault(_entity);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-(0, _entity2.default)();
+/**
+ * create table => database typeorm
+ */
+// createTable();
+require('./knex');

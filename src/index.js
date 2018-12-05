@@ -1,5 +1,8 @@
+require('./knex');
 import express from 'express';
 import createTable from './entity';
 
-
-createTable();
+/**
+ * create table => database typeorm
+ */
+// createTable();
