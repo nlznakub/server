@@ -6,7 +6,7 @@
   "scripts": {
     "compile": "babel src -w --out-dir dist",
     "build": "babel src --out-dir dist",
-    "start": "DEBUG=express:* nodemon dist/index.js"
+    "start": "DEBUG=debugging:* nodemon dist/index.js"
   },
   "repository": {
     "type": "git",
@@ -26,11 +26,22 @@
     "babel-preset-es2015": "^6.24.1"
   },
   "dependencies": {
+    "@types/express-rate-limit": "^3.3.0",
+    "body-parser": "^1.18.3",
+    "cookie-session": "^2.0.0-beta.3",
+    "cors": "^2.8.5",
     "debug": "^4.1.0",
+    "dotenv": "^6.2.0",
     "express": "^4.16.4",
+    "express-rate-limit": "^3.3.2",
+    "express-validator": "^5.3.1",
+    "helmet": "^3.15.0",
+    "jsonwebtoken": "^8.4.0",
     "knex": "^0.14.6",
+    "moment-timezone": "^0.5.23",
     "mysql": "^2.16.0",
+    "node-schedule": "^1.3.1",
     "nodemon": "^1.18.7",
-    "typeorm": "^0.2.9"
+    "winston": "^3.1.0"
   }
 }

@@ -4,7 +4,7 @@ module.exports = {
     connection: {
       user: 'root', // username
       password: 'waterfire', // password
-      database: 'typeorm' // database name
+      database: 'knex' // database name
     },
     define: {
       charset: 'utf8',
