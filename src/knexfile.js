@@ -2,9 +2,9 @@ module.exports = {
   development: {
     client: 'mysql', // type database
     connection: {
-      user: 'root', // username
-      password: 'waterfire', // password
-      database: 'knex' // database name
+      user: 'dbmasteruser', // username
+      password: 'peer1234', // password
+      database: 'tutorial' // database name
     },
     define: {
       charset: 'utf8',
