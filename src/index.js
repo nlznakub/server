@@ -68,5 +68,5 @@ app.use((req, res, next) => {
 createApi(app, version);
 
 app.listen(process.env.PORT, () => {
-    debug(`Server is running port: ${process.env.PORT}`)
+    debug(`Server is running port focus: ${process.env.PORT}`)
 })
