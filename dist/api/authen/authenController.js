@@ -30,12 +30,25 @@ var authenController = function () {
     }
 
     _createClass(authenController, [{
+        key: 'getUserAll',
+        value: async function getUserAll(req, res) {
+            try {
+                var result = await _authenModel2.default.getUserAll();
+                (0, _response.success)(res, result);
+            } catch (error) {
+                (0, _debug.err)(error, req.originalUrl);
+                (0, _response.failed)(res, "get user error");
+            }
+        }
+    }, {
         key: 'getUser',
         value: async function getUser(req, res) {
             try {
-                var result = await _authenModel2.default.getUserAll({ user_id: user_id });
+                throw "hello";
+                var user_id = req.body.user_id;
+
+                var result = await _authenModel2.default.getUser({ user_id: user_id });
                 (0, _response.success)(res, result);
-                (0, _debug.debug)(result);
             } catch (error) {
                 (0, _debug.err)(error, req.originalUrl);
                 (0, _response.failed)(res, "get user error");
@@ -45,7 +58,6 @@ var authenController = function () {
         key: 'insertUser',
         value: async function insertUser(req, res) {
             try {
-
                 (0, _response.success)(res, '');
             } catch (error) {
                 (0, _debug.err)(error.message, req.originalUrl);

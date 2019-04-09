@@ -41,21 +41,21 @@ var version = '/api/v1';
 app.use((0, _helmet2.default)());
 
 var whitelist = ['http://localhost:3000', undefined];
-var corsOption = {
-    origin: function origin(_origin, cb) {
-        (0, _debug.debug)('origin %o', _origin);
-        if (whitelist.indexOf(_origin) !== -1) {
-            cb(null, true);
-        } else {
-            cb(new Error('Not allows by Cors'));
-        }
-    },
-    optionsSuccessStatus: 200,
-    preflightContinue: true,
-    credentials: true
-};
+// const corsOption = {
+//     origin: (origin, cb) => {
+//         debug('origin %o', origin);
+//         if (whitelist.indexOf(origin) !== -1) {
+//             cb(null, true)
+//         } else {
+//             cb(new Error('Not allows by Cors'))
+//         }
+//     },
+//     optionsSuccessStatus: 200,
+//     preflightContinue: true,
+//     credentials: true
+// }
 
-app.use((0, _cors2.default)(corsOption));
+// app.use(cors(corsOption));
 app.use(_bodyParser2.default.urlencoded({ extended: true, limit: '50mb' }));
 app.use(_bodyParser2.default.json({ limit: '50mb' }));
 
@@ -86,5 +86,5 @@ app.use(function (req, res, next) {
 (0, _api.createApi)(app, version);
 
 app.listen(process.env.PORT, function () {
-    (0, _debug.debug)('Server is running port: ' + process.env.PORT);
+    (0, _debug.debug)('Server is running port focus: ' + process.env.PORT);
 });

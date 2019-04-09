@@ -22,6 +22,14 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var route = (0, _express.Router)();
 
-route.post('/getUser', (0, _token.validate_token)(), [(0, _check.check)('user_id').isNumeric().withMessage('user_id not found')], (0, _validate.validate)(), _authenController2.default.getUser);
+route.get('/getUserAll', _authenController2.default.getUserAll);
+
+route.post('/getUser',
+// validate_token(),
+// [
+//     check('user_id').isNumeric().withMessage('user_id not found')
+// ],
+// validate(),
+_authenController2.default.getUser);
 
 exports.default = route;

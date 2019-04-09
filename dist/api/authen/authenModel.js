@@ -34,7 +34,12 @@ var authenModel = function () {
         }
     }, {
         key: 'getUserAll',
-        value: function getUserAll(_ref2) {
+        value: function getUserAll() {
+            return (0, _index2.default)('tbl_user').select();
+        }
+    }, {
+        key: 'getUser',
+        value: function getUser(_ref2) {
             var user_id = _ref2.user_id;
 
             return (0, _index2.default)('tbl_user').select().where({ user_id: user_id });

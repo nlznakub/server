@@ -21,6 +21,6 @@ async function migrate() {
         (0, _debug.err)('xxx knex fail xxx', error.message);
     }
 }
-
+(0, _debug.debug)('!!! knex !!!');
 migrate();
 exports.default = knex;
