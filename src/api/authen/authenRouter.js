@@ -6,12 +6,12 @@ import { validate } from '../../middleware/validate';
 import { validate_token } from '../../middleware/token';
 const route = Router();
 
-route.post('/getUserAll',
+route.get('/getUserAll',
     authenController.getUserAll
 )
 
 route.post('/getUser',
-    validate_token(),
+    // validate_token(),
     [
         check('user_id').isNumeric().withMessage('user_id not found')
     ],
