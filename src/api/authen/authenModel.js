@@ -10,7 +10,12 @@ class authenModel {
 
     }
 
-    getUserAll({ user_id }) {
+    getUserAll() {
+        return knex('tbl_user')
+            .select()
+    }
+
+    getUser({ user_id }) {
         return knex('tbl_user')
             .select()
             .where({ user_id });

@@ -6,11 +6,21 @@ import authenModel from './authenModel';
 import { success, failed } from '../../config/response'
 
 class authenController {
+    async getUserAll(req, res) {
+        try {
+            let result = await authenModel.getUserAll();
+            success(res, result)
+        } catch (error) {
+            err(error, req.originalUrl)
+            failed(res, "get user error");
+        }
+    }
+
     async getUser(req, res) {
         try {
-            let result = await authenModel.getUserAll({ user_id: 1 });
+            const { user_id } = req.body;
+            let result = await authenModel.getUser({ user_id });
             success(res, result)
-            debug(result)
         } catch (error) {
             err(error, req.originalUrl)
             failed(res, "get user error");
@@ -19,7 +29,6 @@ class authenController {
 
     async insertUser(req, res) {
         try {
-
             success(res, '')
         } catch (error) {
             err(error.message, req.originalUrl);
