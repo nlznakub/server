@@ -12,10 +12,10 @@ route.get('/getUserAll',
 
 route.post('/getUser',
     // validate_token(),
-    // [
-    //     check('user_id').isNumeric().withMessage('user_id not found')
-    // ],
-    // validate(),
+    [
+        check('user_id').isNumeric().withMessage('user_id not found')
+    ],
+    validate(),
     authenController.getUser
 )
 
