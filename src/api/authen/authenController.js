@@ -8,7 +8,7 @@ import { success, failed } from '../../config/response'
 class authenController {
     async getUser(req, res) {
         try {
-            let result = await authenModel.getUserAll({ user_id });
+            let result = await authenModel.getUserAll({ user_id: 1 });
             success(res, result)
             debug(result)
         } catch (error) {
