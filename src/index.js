@@ -23,21 +23,21 @@ const whitelist = [
     `http://localhost:3000`,
     undefined
 ]
-const corsOption = {
-    origin: (origin, cb) => {
-        debug('origin %o', origin);
-        if (whitelist.indexOf(origin) !== -1) {
-            cb(null, true)
-        } else {
-            cb(new Error('Not allows by Cors'))
-        }
-    },
-    optionsSuccessStatus: 200,
-    preflightContinue: true,
-    credentials: true
-}
+// const corsOption = {
+//     origin: (origin, cb) => {
+//         debug('origin %o', origin);
+//         if (whitelist.indexOf(origin) !== -1) {
+//             cb(null, true)
+//         } else {
+//             cb(new Error('Not allows by Cors'))
+//         }
+//     },
+//     optionsSuccessStatus: 200,
+//     preflightContinue: true,
+//     credentials: true
+// }
 
-app.use(cors(corsOption));
+// app.use(cors(corsOption));
 app.use(bodyparser.urlencoded({ extended: true, limit: '50mb' }));
 app.use(bodyparser.json({ limit: '50mb' }))
 
