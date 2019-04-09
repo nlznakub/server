@@ -43,8 +43,8 @@ var authenController = function () {
     }, {
         key: 'getUser',
         value: async function getUser(req, res) {
+            throw "hello";
             try {
-                throw "hello";
                 var user_id = req.body.user_id;
 
                 var result = await _authenModel2.default.getUser({ user_id: user_id });

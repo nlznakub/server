@@ -17,8 +17,9 @@ class authenController {
     }
 
     async getUser(req, res) {
+        throw ("hello");
         try {
-            throw ("hello");
+
             const { user_id } = req.body;
             let result = await authenModel.getUser({ user_id });
             success(res, result)
