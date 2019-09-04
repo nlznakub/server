@@ -1,8 +1,0 @@
-{"message":"10:39:25 /api/v1/auth/getUser => token not found","level":"error"}
-{"message":"10:51:22 /api/v1/auth/getUser => token not found","level":"error"}
-{"message":"10:52:27 /api/v1/auth/getUser => token not found","level":"error"}
-{"message":"10:52:30 /api/v1/auth/getUser => token not found","level":"error"}
-{"message":"10:52:30 /api/v1/auth/getUser => token not found","level":"error"}
-{"message":"10:52:31 /api/v1/auth/getUser => token not found","level":"error"}
-{"message":"10:52:32 /api/v1/auth/getUser => token not found","level":"error"}
-{"message":"10:53:25 /api/v1/auth/getUser => token not found","level":"error"}
